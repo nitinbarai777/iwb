@@ -1,0 +1,312 @@
+HTML { overflow-y: scroll;}
+
+html, body, #heroimage{
+  width:100%;
+  height:100%;
+}
+
+#heroimage{
+  background:url(/assets/03.jpg) center center;
+  background-size:cover;
+}
+
+/*
+#heroimage.city{   
+  background-size:cover;
+  height: 40%;
+  margin-top:100px;
+}
+
+#heroimage.city.newyork{   
+  background:url('../img/Brooklyn-3.jpg') center center;
+}
+#heroimage.city.londra{   
+  background:url('../img/londra.jpg') center center;
+}
+#heroimage.city.tokio{   
+  background:url('../img/tokio.jpg') center center;
+}
+*/
+
+#content{
+    padding-top:120px;
+}
+#content.pageWrapper{
+    padding-top:120px;
+}
+
+#content.homepage{
+    padding-top:20px;
+}
+
+
+ol li{
+    padding-bottom:20px;
+}
+
+
+.extendWrapper{
+    width: 100%;
+}
+
+
+.extendWrapper.mappa{
+  background:url(/assets/itinerario_bg.png)  repeat-x center center;
+}
+
+
+footer .extendWrapper{
+    background-color: #000;
+    color:#fff;
+}
+footer .extendWrapper.loghi{
+    background-color: #fff;
+}
+
+.loghi div{
+    text-align: center;
+    color:#c9ad9b;
+}
+
+.loghi img{
+    padding:10px;
+}
+
+.row{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.imgResp{
+    width: 100%;
+    height: auto;
+    display: block;      
+}
+
+.navbar-brand {
+    padding: 10px 15px;
+}
+
+.navbar-default{
+    
+    background-image: none;
+}
+
+#CoverMsg .jumbotron{
+ background-color: rgba(122, 143, 166, 0.5);
+}
+
+/* classifica related */ 
+#House { overflow-y: scroll;}
+
+.piano{position: relative; overflow: hidden}
+.posizione{ position: absolute; top:40%; left: 10%; color: #000 }
+.big{font-size: 300%; color: #ccc}
+
+
+span.piu{ color:green}
+span.meno{ color:red}
+
+.piu {
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  
+  border-bottom: 5px solid black;
+}
+
+
+
+/* city related */ 
+.city h2{
+    margin-top: 0;
+}
+.city .list-group-item h4 {
+    color:#c9ad9b !important; 
+}
+.city .list-group-item.active h4{
+    color:#7a8fa6 !important; 
+}
+.city .list-group-item .img-thumbnail {
+float:left; width:70px; margin-right:20px;
+}
+.moreInfo{background-color:#c9ad9b; padding:10px; color:white;}
+
+
+
+.red {
+  background-color: red;
+}
+.green {
+  background-color: green;
+}
+.blue {
+  background-color: blue;
+}
+.yellow {
+  background-color: yellow;
+}
+.circle, .circle1, .circle2, .circle3, .circle4 {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 500%;
+  position: relative;
+  box-shadow:/* inset -1px -1px 10px #000,*/ 1px 1px 2px black, inset 0px 0px 1px black;
+  display: inline-block;
+  margin: 0;
+}
+.sphere::after {
+  background-color: rgba(255, 255, 255, 0.3);
+  content: '';
+  height: 45%;
+  width: 12%;
+  position: absolute;
+  top: 0;
+  left: 0%;
+  border-radius: 50%;
+  transform: rotate(40deg);
+}
+
+
+
+
+
+.triangle {
+    position:relative;
+    background-color:trasparent;
+    height:20px !important;
+    width:40px !important;
+}
+.triangle.up {
+    color:green;
+}
+.triangle.up::after {
+    content:'';
+    position: absolute;
+    bottom: 100%;
+    margin-left: -20px;
+    width: 0;
+    height: 0;
+    border-bottom: solid 10px green;
+    border-left: solid 10px transparent;
+    border-right: solid 10px transparent;
+}
+
+.triangle.down {
+    color:red;
+}
+.triangle.down:after {
+    content:'';
+    position: absolute;
+    top: 100%;
+    margin-left: -20px;
+    width: 0;
+    height: 0;
+    border-top: solid 10px red;
+    border-left: solid 10px transparent;
+    border-right: solid 10px transparent;
+}
+
+
+
+
+
+
+
+.posizione {background-color:rgba(255,255,255,0.5)}
+.posizione span{margin-left: 20px;}
+
+@media (max-width: 992px) {
+    footer{ font-size:70%;}
+    footer img{ padding-top: 20px;}
+    footer .text-right {
+        text-align: center;   
+    }
+    footer .text-center{
+        text-align:right;   
+    }
+    .posizione{ font-size: 80%}
+}
+
+@media (max-width: 769px) {
+    .posizione{ font-size: 70%}
+    .circle{ font-size: 70%}
+}
+
+@media (max-width: 600px) {
+    .posizione{ font-size: 60%}
+    .circle{ width: 12px; height: 12px}
+}
+
+
+#Loading{ width: 100%; height: 100%; background-color:#fff; display:block; position: absolute; top:0; right: 0; bottom:0; left:0; z-index: 100; opacity:1}
+
+.spinner {
+  position:absolute;
+  top:50%;
+  left:50%;
+  margin: -20px 0 0 -25px;
+  width: 50px;
+  height: 40px;
+  text-align: center;
+  font-size: 10px;
+}
+
+.spinner > div {
+  background-color: #26313E;
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+  
+  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+.spinner .rect3 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+.spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+.spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+@-webkit-keyframes sk-stretchdelay {
+  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }  
+  20% { -webkit-transform: scaleY(1.0) }
+}
+
+@keyframes sk-stretchdelay {
+  0%, 40%, 100% { 
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }  20% { 
+    transform: scaleY(1.0);
+    -webkit-transform: scaleY(1.0);
+  }
+}
+
+.navbar-default {
+  background-color: #26313e !important;
+  border-color: #192129 !important;
+}
+.navbar {
+  min-height: 100px !important;
+  margin-bottom: 25px !important;
+  border: 1px solid transparent !important;
+}

@@ -1,0 +1,57 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+  @import "theme.css";
+  @import "bootstrap-sprockets";
+  @import "bootstrap";
+  @import "font-awesome-sprockets";
+  @import "font-awesome";
+  
+  body {
+    font-family: "Ubuntu",Helvetica,Arial,sans-serif;
+    font-size: 18px;
+    line-height: 1.42857143;
+    color: #848484;
+    background-color: #fff;
+  }
+  .jumbotron {
+    margin-bottom: 30px !important;
+    color: #fff !important;
+    background-color: #7a8fa6 !important; 
+    padding-top: 48px !important;
+    padding-bottom: 48px !important;
+  }
+  .navbar-default .navbar-nav>li>a {
+    color: #fff !important;
+  }
+  .navbar-nav>li>a {
+    padding-top: 37.5px !important;
+    padding-bottom: 37.5px !important;
+  }
+  h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: inherit;
+    font-weight: 300;
+    line-height: 1.1;
+    color: #c9ad9b;
+  }
+  .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
+    color: #c9ad9b !important;
+    background-color: #556373;
+  }
+  .moreInfo {
+    background-color: #c9ad9b;
+    padding: 10px;
+    color: white;
+  }
