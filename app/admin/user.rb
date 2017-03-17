@@ -12,7 +12,7 @@ ActiveAdmin.register User do
 #   permitted
 # end
 
-  permit_params :first_name, :last_name, :email, :manager_id,
+  permit_params :first_name, :last_name, :email, :manager_id, :password, :password_confirmation,
                 user_user_groups_attributes: [:id, :user_group_id, :_destroy]
 
   filter :id
@@ -81,6 +81,16 @@ ActiveAdmin.register User do
       end
     end
     f.actions
+  end
+
+  controller do
+
+    def create
+      params[:user][:password] = "password"
+      params[:user][:password_confirmation] = "password"
+      super
+    end
+
   end
 
 end

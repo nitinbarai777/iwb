@@ -21,3 +21,17 @@
 
 en:
   hello: "Hello world"
+  general:
+    login: "Login"
+  login:
+    login_to_your_account: "LOG IN TO YOUR ACCOUNT"
+    email: "e-mail address"
+    password: "password"
+  signup:
+    create_account: "CREATE AN ACCOUNT"
+    fname: "first name"
+    lname: "last name"
+    email: "e-mail address"
+    password: "password"
+    password_confirmation: "password confirmation"
+    register: "REGISTER"
