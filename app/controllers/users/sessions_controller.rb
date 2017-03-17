@@ -26,6 +26,6 @@ class Users::SessionsController < Devise::SessionsController
   private 
 
   def after_sign_in_path_for(resource)
-    root_path
+    root_path(user_id: resource.id, user_token: SecureRandom.hex(10) + resource.id.to_s)
   end
 end

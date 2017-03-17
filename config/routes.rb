@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'charts/:name', to: "charts#show", as: :chart
+
+  get 'cities/:name', to: "cities#show", as: :city
+
   mount Ckeditor::Engine => '/ckeditor'
 
   devise_for :users, controllers: { sessions: "users/sessions", confirmations: 'users/confirmations',

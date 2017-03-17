@@ -4,10 +4,13 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  has_many :user_user_groups, inverse_of: :user
+  has_many :user_user_groups, inverse_of: :user, dependent: :destroy
   accepts_nested_attributes_for :user_user_groups, allow_destroy: true
 
   has_many :user_groups, :through => :user_user_groups
+
+  has_many :chart_users, inverse_of: :user, dependent: :destroy
+  has_many :charts, :through => :chart_users
 
   validates :first_name, :presence => true, :length => {:maximum => 50}
   validates :last_name, :length => {:maximum => 50, :allow_blank => true}

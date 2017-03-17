@@ -48,7 +48,7 @@ ActiveAdmin.register User do
       tab "User Groups" do
         table_for user.user_groups do
           column :id do |user_group|
-            link_to user_group.id, admin_user_path(user_group.id)
+            link_to user_group.id, admin_user_group_path(user_group.id)
           end
           column :name do |user_group|
             user_group.name

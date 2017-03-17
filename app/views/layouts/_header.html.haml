@@ -14,30 +14,26 @@
           %li
             %a{:href => "/regolamento"} REGOLAMENTO
           %li.dropdown
-            %a.rankings-toggle{"aria-expanded" => "tr", "aria-haspopup" => "true", "data-toggle" => "dropdown", :role => "button"}
+            %a.dropdown-toggle{"aria-expanded" => "tr", "aria-haspopup" => "true", "data-toggle" => "dropdown", :role => "button"}
               CLASSIFICHE
               %span.caret
             %ul.dropdown-menu
-              %li
-                %a{:href => "/classifiche"} Classifica A
-              %li.divider{:role => "separator"}
-              %li
-                %a{:href => "/classifiche"} Classifica B
-              %li.divider{:role => "separator"}
-              %li
-                %a{:href => "/classifiche"} Classifica C
+              - charts = current_user.user_groups.map{|ug| ug.charts}.flatten
+              - charts.each do |chart|
+                %li
+                  = link_to chart.name, chart_path(chart.name)
+                  - unless chart == charts.last
+                    %li.divider{:role => "separator"}
           %li.dropdown
             %a.dropdown-toggle{"aria-expanded" => "tr", "aria-haspopup" => "true", "data-toggle" => "dropdown", :role => "button"}
               DESTINAZIONI
               %span.caret
             %ul.dropdown-menu
-              %li
-                %a{:href => "/parigi_londra"} PARIGI - LONDRA
-              %li.divider{:role => "separator"}
-              %li
-                %a{:href => "/newyork"} NEW YORK
-              %li.divider{:role => "separator"}
-              %li
-                %a{:href => "/tokyo"} TOKYO
+              -cities = City.all
+              - cities.each do |city|
+                %li
+                  = link_to city.name, city_path(name: city.name)
+                - unless city == cities.last
+                  %li.divider{:role => "separator"}
           %li= link_to 'Logout', sign_out_path
       / /.nav-collapse

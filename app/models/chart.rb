@@ -2,7 +2,7 @@ class Chart < ActiveRecord::Base
 
   belongs_to :user_group, inverse_of: :charts
 
-  has_many :chart_users, inverse_of: :chart
+  has_many :chart_users, inverse_of: :chart, dependent: :destroy
   accepts_nested_attributes_for :chart_users, allow_destroy: true
 
   has_many :users, through: :chart_users
