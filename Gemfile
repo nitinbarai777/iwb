@@ -45,6 +45,10 @@ gem "haml", '~> 4.0.6'
 # Haml scaffolding functions
 gem 'haml-rails', '~> 0.9.0', :group => :development
 
+gem 'ckeditor'
+
+gem 'paperclip'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

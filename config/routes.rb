@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  mount Ckeditor::Engine => '/ckeditor'
+
   devise_for :users, controllers: { sessions: "users/sessions", confirmations: 'users/confirmations',
                                     :registrations => 'users/registrations', :passwords => 'users/passwords',
                                     :mailer => 'users/mailer' }
