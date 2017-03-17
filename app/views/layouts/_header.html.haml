@@ -1,0 +1,43 @@
+%nav.navbar.navbar-default.navbar-fixed-top{:style => "opacity: 1;"}
+  .container
+    .navbar-header
+      %button.navbar-toggle.collapsed{"aria-controls" => "navbar", "aria-expanded" => "false", "data-target" => "#navbar", "data-toggle" => "collapse", :type => "button"}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.navbar-brand{:href => "/"}
+        %img{:src => "/assets/to-the-top.png"}/
+    - if current_user.present?
+      #navbar.navbar-collapse.collapse
+        %ul#menu.nav.navbar-nav.navbar-right
+          %li
+            %a{:href => "/regolamento"} REGOLAMENTO
+          %li.dropdown
+            %a.rankings-toggle{"aria-expanded" => "tr", "aria-haspopup" => "true", "data-toggle" => "dropdown", :role => "button"}
+              CLASSIFICHE
+              %span.caret
+            %ul.dropdown-menu
+              %li
+                %a{:href => "/classifiche"} Classifica A
+              %li.divider{:role => "separator"}
+              %li
+                %a{:href => "/classifiche"} Classifica B
+              %li.divider{:role => "separator"}
+              %li
+                %a{:href => "/classifiche"} Classifica C
+          %li.dropdown
+            %a.dropdown-toggle{"aria-expanded" => "tr", "aria-haspopup" => "true", "data-toggle" => "dropdown", :role => "button"}
+              DESTINAZIONI
+              %span.caret
+            %ul.dropdown-menu
+              %li
+                %a{:href => "/parigi_londra"} PARIGI - LONDRA
+              %li.divider{:role => "separator"}
+              %li
+                %a{:href => "/newyork"} NEW YORK
+              %li.divider{:role => "separator"}
+              %li
+                %a{:href => "/tokyo"} TOKYO
+          %li= link_to 'Logout', sign_out_path
+      / /.nav-collapse

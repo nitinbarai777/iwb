@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= stub "active_admin"
  */
   @import "theme.css";
   @import "bootstrap-sprockets";
@@ -53,5 +54,13 @@
   .moreInfo {
     background-color: #c9ad9b;
     padding: 10px;
+    color: white;
+  }
+
+  .login-page {
+    margin-bottom: 5.4%;
+  }
+
+  .footer-link a {
     color: white;
   }

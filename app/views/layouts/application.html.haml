@@ -1,0 +1,12 @@
+!!!
+%html
+  %head
+    %title Iwb
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    = render partial: 'layouts/cover_msg' if params["action"].eql?("index") && params["controller"].eql?("staticpages")
+    = render partial: 'layouts/header'
+    = yield
+    = render partial: 'layouts/footer'

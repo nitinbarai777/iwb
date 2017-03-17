@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   root to: 'staticpages#index'
   
   get '/classifiche' => 'staticpages#classifiche'
-  get '/criteri_di_partecipazione'=> 'staticpages#criteri_di_partecipazione'
+  get '/regolamento'=> 'staticpages#regolamento'
   get '/parigi_londra' => 'staticpages#parigi_londra'
   get '/newyork' => 'staticpages#newyork'
   get '/tokyo' => 'staticpages#tokyo'

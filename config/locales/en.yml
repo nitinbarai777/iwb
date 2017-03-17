@@ -24,7 +24,7 @@ en:
   general:
     login: "Login"
   login:
-    login_to_your_account: "LOG IN TO YOUR ACCOUNT"
+    login_to_your_account: "Investment Banking Login"
     email: "e-mail address"
     password: "password"
   signup:
